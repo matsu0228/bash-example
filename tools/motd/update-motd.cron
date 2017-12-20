@@ -1,0 +1,2 @@
+#update-moted
+*/5 * * * * root sh /usr/local/bin/update_motd_for_centos.sh

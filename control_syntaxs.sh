@@ -26,3 +26,12 @@ fi
 if [ -L "./test" ]; then
   echo "リンク　が存在するか"
 fi
+
+# check whethre command is exist or not & install
+#  quoate of "${IS_EXIST}" is important because if it isn't that command will execute
+# ----------------------------------------------
+IS_EXIST=$(type ls)
+INSTALL=$(echo ls)
+if [ ! "${IS_EXIST}" ]; then 
+  ${INSTALL}; 
+fi
